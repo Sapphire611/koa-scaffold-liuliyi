@@ -1,0 +1,10 @@
+exports.commonSchema = require('./common');
+exports.configSchema = require('./config');
+exports.userSchema = require('./user');
+exports.deviceSchema = require('./device');
+exports.operationLogSchema = require('./operationLog');
+exports.buildingSchema = require('./building');
+exports.roomSchema = require('./room');
+exports.fileSchema = require('./file');
+exports.bookingSchema = require('./booking');
+exports.roleSchema = require('./role');

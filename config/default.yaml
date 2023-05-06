@@ -1,0 +1,102 @@
+port: 19061
+
+#env: development
+#env: product
+
+#db: mongodb://172.16.30.120:27017/room-booking
+db: mongodb://127.0.0.1:27018/room-booking
+redis: redis://127.0.0.1:6379/0
+mqtt: mqtt://127.0.0.1:1883
+mqttTopic: devices
+
+# log
+logger:
+    level: debug
+    file: false
+    console: true
+
+# jwt
+security:
+    jwtSecret: QWZZuUjA
+
+uploads: uploads/
+# sms
+sms:
+    appid: 1400542463
+    appkey: 'd649b427dc05ddc1f568d4e8a7fd964a'
+    smsSign: 'Space365'
+    secretId: AKIDvay5vPuWCguHxMvQaYDn8NOK5Ykf67SW
+    secretKey: 5uPdZ2FDvWv3uIfla8kDVXMFhtncsugD
+    login:
+        verificationCode:
+            templateId: 1561459
+    dailyLimit: 20
+
+#### 业务字段
+# PIN码长度
+# pin_length: 4
+# 重复发送验证码间隔 s
+retry_send_interval_time: 5
+# 验证码过期时间 s
+verify_code_expire_time: 600
+# 用户过期时间 (day)
+user_expire_time: 30
+# 文件上传token过期时间
+file_token_expire_time: 600
+# 文件类型
+file_type_list:
+    - application/pdf
+    - image/jpeg
+    - image/jpe
+    - image/jpg
+    - image/png
+    - image/bmp
+    - video/mp4
+    - video/mpeg
+# 文件打小限制 100M
+file_max_size: 104857600
+
+# device
+device_activateCode_expire_time: 300
+device_random_code_length: 6
+# days
+device_expire_time: 30
+
+mail:
+    sender: '"MeetingPad" <meeting365@shgbit.com>'
+    host: 'smtp.exmail.qq.com'
+    port: 465
+    secure: true
+    auth:
+        user: 'meeting365@shgbit.com'
+        pass: 'Shgbit123'
+
+# 钉钉回调跳转地址(线上host地址)
+dingTalk:
+    redirect_uri: 'http://172.16.40.17/'
+
+# 区号
+areaCode:
+    - '+86'
+    - '+1'
+    - '+1'
+    - '+852'
+    - '+886'
+    - '+81'
+    - '+65'
+    - '+44'
+    - '+49'
+    - '+61'
+    - '+33'
+    - '+82'
+    - '+91'
+    - '+46'
+
+# 短信模板
+zhCn: 1716466
+
+zhEn: 1716429
+
+outCn: 1716568
+
+outEn: 1716568
