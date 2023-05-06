@@ -12,6 +12,7 @@ const { userAgent } = require('koa-useragent');
 const koaLogger = require('./middleware/koa-logger');
 const cors = require('@koa/cors');
 const requestId = require('koa-requestid');
+const cache = require('koa-redis-cache')
 
 const { auth } = require('./middleware/koa-auth');
 const koaMongoose = require('./middleware/koa-mongoose');
@@ -40,7 +41,10 @@ class WebServer {
 
         koa.use(auth());
         koa.use(koaMongoose());
-
+        koa.use(cache({
+            expire: 60,
+        }))
+        
         koa.use(routers());
 
         koa.on('error', (error, _ctx) => {

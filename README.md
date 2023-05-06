@@ -1,4 +1,4 @@
-# Room Booking Backend Guide
+# Scaffold Backend Guide
 
 > Author : [柳李逸 (Sapphire611)](https://git.shgbit.xyz:9443/liuliyi)
 

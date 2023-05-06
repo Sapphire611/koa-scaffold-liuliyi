@@ -7,6 +7,5 @@ exports.redis = require('./redis').redis;
 exports.jwt = require('./jwt');
 exports.mongodb = require('./mongodb');
 exports.auth = require('./auth');
-exports.sms = require('./sms');
 exports.mqtt = require('./mqtt');
 exports.fileUploader = require('./fileUploader');

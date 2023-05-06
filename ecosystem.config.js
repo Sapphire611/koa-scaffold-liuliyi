@@ -1,6 +1,6 @@
 module.exports = {
 	apps: {
-		name: 'room-booking',
+		name: 'koa-scaffhold-liuliyi',
 		script: './dist/bundle.js',
 		instances: 1,
 		instance_var: 'INSTANCE_ID',
